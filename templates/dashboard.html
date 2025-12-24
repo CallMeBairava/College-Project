@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="dashboard">
+    <h2>Welcome {{ role | capitalize }}</h2>
+
+    {% if role == 'admin' %}
+        <p>Full System Control</p>
+
+        <a href="{{ url_for('admin_create_user') }}">
+            <button>Create Users</button>
+        </a>
+
+    {% elif role == 'student' %}
+        <p>Gate Pass Request<br>Hostel Attendance</p>
+
+    {% elif role == 'security' %}
+        <p>Entry / Exit Verification</p>
+
+    {% elif role == 'warden' %}
+        <p>Hostel Approval</p>
+    {% endif %}
+    {% if role == 'admin' %}
+    <a href="/admin/create"><button>Create User</button></a><br><br>
+    <a href="/admin/users"><button>View Users</button></a>
+     {% endif %}
+
+
+    <br><br>
+    <a href="{{ url_for('logout') }}">Logout</a>
+</div>
+
+</body>
+</html>

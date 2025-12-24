@@ -1,0 +1,136 @@
+/* ---------- GLOBAL ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(120deg, #2b5876, #4e4376);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a {
+    text-decoration: none;
+    color: #4e4376;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------- MAIN BOX ---------- */
+.login-box,
+.dashboard {
+    background: #ffffff;
+    padding: 30px;
+    width: 360px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* ---------- INPUTS ---------- */
+input,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background: #4e4376;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+button:hover {
+    background: #2b5876;
+}
+
+/* ---------- MESSAGES ---------- */
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+.success {
+    color: green;
+    margin-top: 10px;
+}
+
+/* ---------- ADMIN USERS TABLE ---------- */
+.table-container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table th {
+    background: #4e4376;
+    color: white;
+    padding: 12px;
+}
+
+table td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+}
+
+table tr:hover {
+    background-color: #f2f2f2;
+}
+
+/* ---------- ACTION BUTTONS ---------- */
+.action-btn {
+    padding: 6px 12px;
+    margin: 2px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+.edit-btn {
+    background: #2b5876;
+}
+
+.delete-btn {
+    background: #c0392b;
+}
+
+/* ---------- FORM BOX ---------- */
+.form-box {
+    width: 360px;
+    margin: auto;
+}
+
+/* ---------- SMALL SCREENS ---------- */
+@media (max-width: 600px) {
+    .login-box,
+    .dashboard,
+    .form-box {
+        width: 90%;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}

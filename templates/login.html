@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="login-box">
+    <h2>College Gate & Hostel Management</h2>
+
+    {% if error %}
+        <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <form method="POST">
+        <select name="role" required>
+            <option value="">Select Role</option>
+            <option value="student">Student</option>
+            <option value="staff">Staff</option>
+            <option value="security">Security</option>
+            <option value="warden">Warden</option>
+            <option value="admin">Admin</option>
+        </select>
+
+        <input type="text" name="userid" placeholder="User ID" required>
+        <input type="password" name="password" placeholder="Password" required>
+
+        <button type="submit">Login</button>
+    </form>
+</div>
+
+</body>
+</html>
